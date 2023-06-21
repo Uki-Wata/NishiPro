@@ -1,0 +1,115 @@
+<div class="main-container">
+  <div style="text-align:center", class='font_test'>
+    <h1><b>PlusSEC</b></h1>
+  </div>
+  
+  <div class="card border-primary mb-3">
+    <div class="card-header">
+      プラスセキュリティ人材とは
+    </div>
+    <div class="card-body">
+      <p class="card-text">セキュリティの専門家ではないが、日々の業務の中でセキュリティを意識して必要で十分なセキュリティ対策を行える人材のこと。</p>
+    </div>
+  </div>
+  
+  <div class="card border-primary mb-3">
+    <div class="card-header">
+      プラスセキュリティ人材の必要性について
+    </div>
+    <div class="card-body">
+      <p class="card-text">ITの利活用が急速に進展しており、セキュリティの専門家が不足しているため、専門家一人だけでは全ての業務のセキュリティを確保することが困難です。</br>
+      そのため、各人がセキュリティを意識し、対応できる知識が必要です。</br>
+      プラスセキュリティ人材の育成は、企業全体のセキュリティレベルを向上させるために重要です。</br>
+      プラスセキュリティ人材が一人でも増えれば、サイバー攻撃のリスクを軽減することができます。</br>
+      このツールは業務毎に考慮しなければならないポイント、セキュリティを疎かにした場合の事例をセットで学ぶ事ができます。</br>
+      セキュリティの考慮事項を考える際の最初の足掛かりとしてご活用ください。</p>
+    </div>
+  </div>
+  
+  <div class="card border-primary mb-3">
+    <div class="card-header">
+      活用タイミング
+    </div>
+    <div class="card-body">
+      <p class="card-text">システム開発前の要件定義の内容検討中、運用方法検討中</br>
+      データ管理の際情報漏洩を防ぐ為の設計</br>
+      構築したシステムのテスト時</br>
+      クレジットカード情報などの機密情報を扱う際</br>
+      従業員の個人情報を扱う際</br>
+      後輩指導時</br>
+      日々の勉強の一助として</p>
+    </div>
+  </div>
+  
+  <div class="card border-primary mb-3">
+    <div class="card-header">
+      情報引用元
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        test
+    </div>
+  </div>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <%= link_to image_tag("/shu1.png", width: 420, height: 300), '/index', class: "shu" %>
+            <div class="card-body">
+              <p class="card-text">業務内容から考慮するべきセキュリティ事項を検索可能</p>
+              <button type="button" class="btn btn-sm btn-outline-secondary">検索</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <%= link_to image_tag("/shu2.png", width: 400, height: 400), '/index_inc/incidents', class: "shu" %>
+            <div class="card-body">
+              <p class="card-text">事故事例から考慮するべきセキュリティ事項を検索可能</p>
+              <button type="button" class="btn btn-sm btn-outline-secondary">検索</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <%= link_to image_tag("/shu3.png", width: 400, height: 400), '/index_kno/index', class: "shu" %>
+            <div class="card-body">
+              <p class="card-text">本Webサイトで出てくる単語について検索可能</p>
+              <button type="button" class="btn btn-sm btn-outline-secondary">検索</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <header class="d-flex flex-wrap flex-row-reverse py-3 mb-4 ">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <%= form_tag(importcsv_new_path, method: "get") do %>
+        <%= submit_tag('管理画面', class: 'nav-link') %>
+        <% end %>
+      </li>
+    </ul>
+  </header>
+  
+  </div>
+</div>
+
+
+
+  <!--
+  <%= form_tag('/index', method: "get") do %>
+  <%= submit_tag('業務内容/経験から探す', class: 'btn btn-outline-primary') %>
+  <% end %>
+  
+  <%= form_tag('/index_inc/incidents', method: "get") do %>
+  <%= submit_tag('事故事例から探す', class: 'btn btn-outline-primary') %>
+  <% end %>
+  
+  <%= form_tag('/index_kno/index', method: "get") do %>
+  <%= submit_tag('セキュリティ単語', class: 'btn btn-outline-primary') %>
+  <% end %>
+  -->

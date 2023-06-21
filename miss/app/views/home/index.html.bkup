@@ -1,0 +1,95 @@
+  <div class="container mx+1">
+    <header class="d-flex flex-wrap flex-row ">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <%= form_tag(home_top_path, method: "get") do %>
+          <%= submit_tag('ホーム', class: 'btn btn-outline-primary mx+5') %>
+          <% end %>
+        </li>
+      </ul>
+    </header>
+    <br>
+    <button type="button" class="btn btn-primary">業務内容/経験</button>
+    <!--<button type="button" class="btn btn-outline-primary">過去事例</button>-->
+  <div class="card flex-md-row mx-0 border-primary">
+  <div class="container">
+
+
+<%= form_tag(search_path, method: "get") do %>
+<!--大項目をループで繰り返し表示-->
+<% @bigs.each do |big| %>
+  <div class="p-2 flex-grow-1 bd-highlight">
+  <div class="big">
+    <h2><%= big.memo %></h2>
+    <!--中項目をループで繰り返し表示-->
+    <% big.middles.each do |middle| %>
+      <div class="middle">
+        <!--中項目のチェックボックスを表示-->
+        <h6>
+          <%= check_box_tag "selected_middles[]", middle.id, false, onclick: "chkdisp(this,'smalls' + '#{middle.id}')" %>
+          <%= middle.memo %>
+        </h6>
+        <!--中項目に紐づく小項目を非表示で表示するためのdiv要素-->
+        <div id="smalls<%= middle.id %>" style="display: none;">
+        <!--小項目をループで繰り返し表示-->
+        <% middle.smalls.each do |small| %>
+          <div class="p-2 flex-grow-1 bd-highlight">
+          <div class="small">
+            <!--小項目のチェックボックスとラベル表示-->
+            <label><%= check_box_tag 'small_ids[]', small.id %><%= small.memo %></label>
+          </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+<% end %>
+<%= submit_tag('業務検索', class: 'btn btn-outline-primary') %>
+<% end %>
+
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  // 中項目に紐づく小項目を非表示/表示するための関数
+  function chkdisp(obj, id) {
+    if (obj.checked) {
+      // チェックされた場合、小項目を表示
+      document.getElementById(id).style.display = "block";
+    } else {
+      // チェックが外れた場合、小項目を非表示
+      document.getElementById(id).style.display = "none";
+    }
+  }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // フォーム要素を取得
+  const form = document.getElementById('search-form');
+  // チェックボックス要素を取得
+  const checkboxes = form.querySelectorAll('input[type=checkbox]');
+  // hidden要素を生成
+  const hiddenInput = document.createElement('input');
+  // hidden要素のタイプを指定
+  hiddenInput.type = 'hidden';
+  // hidden要素のname属性を指定
+  hiddenInput.name = 'small_ids';
+  // hidden要素をフォームに追加
+  form.appendChild(hiddenInput);
+  
+  // フォームの送信時に実行する処理
+  form.addEventListener('submit', function(event) {
+    // チェックが入っているcheckbox要素のみを選択
+    const selectedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+    // 選択されたcheckbox要素のvalueを抽出して配列にする
+    const selectedIds = selectedCheckboxes.map(checkbox => checkbox.value);
+    // hidden要素のvalueに選択されたcheckbox要素のvalueをカンマ区切りで格納する
+    hiddenInput.value = selectedIds.join(',');
+  });
+});
+</script>

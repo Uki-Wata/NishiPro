@@ -1,0 +1,186 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class='font_test'>
+          <h1><b>PlusSEC</b></h1>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--管理画面ボタン-->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+          <%= form_tag(importcsv_new_path, method: "get") do %>
+          <%= submit_tag('管理画面', class: 'nav-link') %>
+          <% end %>
+      </div>
+    </div>
+  </nav>
+  
+</br></br></br>
+  
+<!--灰色の部分-->
+<div class="main-container">
+  <style>
+    #myCarousel.carousel {
+      height: 300px; /* 適切な高さを指定してください */
+    }
+  </style>
+  
+  
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="300px" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>プラスセキュリティ人材とは</h1>
+            <p>
+            セキュリティの専門家ではないが、日々の業務の中でセキュリティを意識して必要で十分なセキュリティ対策を行える人材のこと。</br>
+            具体的には、次に例示するような人材が当てはまります。</br>
+            ●新規事業戦略立案時にサイバー関連の脅威への対策を検討する事業部の企画担当者</br>
+            ●自社の DX 展開におけるサイバーセキュリティ上のリスクアセスメントを行う、DX 推進部門担当者</br>
+            ●自社向けアプリケーション開発において脆弱性が作り込まれないように、セキュアコーディングに関するガイドラインを遵守する開発担当者</br>
+            ●システム管理の一環としてアクセスログの異常確認を行う運用担当者</br>
+            ●工場の OT システムの保安対策の一環としてサイバー攻撃対策を検討する設備担当者</br>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="300px" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>プラスセキュリティ人材の必要性</h1>
+            <p>ITの利活用が急速に進展しており、セキュリティの専門家が不足しているため、専門家一人だけでは全ての業務のセキュリティを確保することが困難です。</br>
+            そのため、各人がセキュリティを意識し、対応できる知識が必要です。</br>
+            プラスセキュリティ人材の育成は、企業全体のセキュリティレベルを向上させるために重要です。</br>
+            プラスセキュリティ人材が一人でも増えれば、サイバー攻撃のリスクを軽減することができます。</br>
+            このツールは業務毎に考慮しなければならないポイント、セキュリティを疎かにした場合の事例をセットで学ぶ事ができます。</br>
+            セキュリティの考慮事項を考える際の最初の足掛かりとしてご活用ください。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="300px" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start font_example">
+            <h1>活用タイミング</h1>
+            <p>其ノ壱.システム開発前の要件定義の内容検討中、運用方法検討中</br>
+            其ノ弐.データ管理の際情報漏洩を防ぐ為の設計</br>
+            其ノ参.構築したシステムのテスト時</br>
+            其ノ肆.クレジットカード情報などの機密情報を扱う際</br>
+            其ノ伍.従業員の個人情報を扱う際</br>
+            其ノ陸.後輩指導時</br>
+            其ノ漆.日々の勉強の一助として</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="300px" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>情報引用元</h1>
+            <p>・情報システムにおける セキュリティ コントロール ガイドライン Ver.1.0　Software ISAC</br>
+               ・政府情報システムにおける セキュリティ・バイ・デザインガイドライン　デジタル庁</p>
+            </br></br>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!--前に行くボタン-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <!--後に行くボタン-->
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--下の画像押す部分-->
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="hover"> <!--hover用-->
+              <%= link_to image_tag("/gyomu.png", style: "max-width: 100%;"), '/index', class: "shu" %>
+            </div>
+            <div class="card-body">
+              <p class="card-text">業務内容から考慮するべきセキュリティ事項を検索</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="hover"> <!--hover用-->
+              <%= link_to image_tag("/jirei2.png", style: "max-width: 100%;"), '/index_inc/incidents', class: "shu" %>
+            </div>
+            <div class="card-body">
+              <p class="card-text">事故事例から考慮するべきセキュリティ事項を検索</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="hover"> <!--hover用-->
+              <%= link_to image_tag("/text.png", style: "max-width: 100%;"), '/index_kno/index', class: "shu" %>
+            </div>
+            <div class="card-body">
+              <p class="card-text">本Webサイトで出てくる単語について検索可能</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+
+  <!-- 
+  <header class="d-flex flex-wrap flex-row-reverse py-3 mb-4 ">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <%= form_tag(importcsv_new_path, method: "get") do %>
+        <%= submit_tag('管理画面', class: 'nav-link') %>
+        <% end %>
+      </li>
+    </ul>
+  </header>
+  -->
+
+
+  <!--
+  <%= form_tag('/index', method: "get") do %>
+  <%= submit_tag('業務内容/経験から探す', class: 'btn btn-outline-primary') %>
+  <% end %>
+  
+  <%= form_tag('/index_inc/incidents', method: "get") do %>
+  <%= submit_tag('事故事例から探す', class: 'btn btn-outline-primary') %>
+  <% end %>
+  
+  <%= form_tag('/index_kno/index', method: "get") do %>
+  <%= submit_tag('セキュリティ単語', class: 'btn btn-outline-primary') %>
+  <% end %>
+  -->

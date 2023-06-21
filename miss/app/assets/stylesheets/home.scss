@@ -1,0 +1,53 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ボタン追従用
+.fixed_btn
+{
+  position: fixed;
+  bottom: 30px; 
+  right: 450px;
+  padding: 6px 40px;
+}
+
+// googleフォント用(活用方法)
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yuji+Syuku&display=swap');
+
+.font_test {
+    /* フォントの種類指定 */
+    font-family: 'Dela Gothic One', cursive;
+    display: inline-block;
+    text-align: center;
+}
+
+.font_example {
+    /* フォントの種類指定 */
+    font-family: 'Yuji Syuku', serif;
+}
+
+//.main-container {
+//  background-image: url("/＋せっきゅ姐さん.png");
+//  height: 800px;
+//  background-size: cover;
+//}
+
+.title-box{border: solid 3px #000; background-color: #000; resize: both;}
+//.title-box{width: 78em; border: solid 3px #000; background-color: #000;}
+
+
+.moji-color{color:white;}
+
+.bar1 {
+    background-color:red;
+    height:20px;
+    width: 80%;
+    border-bottom: double;
+}
+
+//.shu {
+//    width:10px; height:2px;
+//}
+.hover:hover{
+  opacity: 0.6;
+}

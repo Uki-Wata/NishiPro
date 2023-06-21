@@ -1,0 +1,18 @@
+// Place all the styles related to the index_inc controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bar1 {
+    background-color:red;
+    height:30px;
+    width: 200%;
+    border-bottom: double;
+}
+
+.fixed_btn
+{
+  position: fixed;
+  bottom: 30px; 
+  right: 450px;
+  padding: 6px 40px;
+}

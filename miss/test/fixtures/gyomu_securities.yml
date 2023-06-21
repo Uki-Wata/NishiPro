@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gyomu: one
+  security: one
+
+two:
+  gyomu: two
+  security: two

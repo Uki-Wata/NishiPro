@@ -1,0 +1,124 @@
+<header class="d-flex flex-wrap flex-row ">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <%= form_tag(home_top_path, method: "get") do %>
+      <%= submit_tag('ホーム', class: 'btn btn-outline-primary mx+5') %>
+      <% end %>
+    </li>
+  </ul>
+</header>
+
+<h2>インポート手順</h2>
+<h6>
+１.「レコード全削除 & IDリセット」を実施<br>
+２.「ファイル選択」を押してインポートしたいCSVファイルを選択<br>
+３.「インポート」ボタンを押下<br>
+※インポート順はBig⇒Middle⇒Small⇒Security⇒Incident⇒Small_Security⇒Incident⇒Security</h6>
+
+<br></br>
+
+<h1>Big CSVインポート</h1>
+<%= form_tag(importcsv_create_big_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_big_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>
+
+<h1>Middle CSVインポート</h1>
+
+<%= form_tag(importcsv_create_middle_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_middle_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>
+
+<h1>Small CSVインポート</h1>
+
+<%= form_tag(importcsv_create_small_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_small_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>
+
+<h1>Small_security CSVインポート</h1>
+
+<%= form_tag(importcsv_create_small_security_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_small_security_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>
+
+<h1>Security CSVインポート</h1>
+
+<%= form_tag(importcsv_create_security_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_security_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<!-- 以下追加部分 -->
+
+<br></br><br></br>
+
+<h1>Incident_security CSVインポート</h1>
+
+<%= form_tag(importcsv_create_incident_security_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_incident_security_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>
+
+<h1>Incident CSVインポート</h1>
+
+<%= form_tag(importcsv_create_incident_path, method: :post, multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:file, 'CSVファイルを選択') %>
+    <%= file_field_tag(:file, accept: '.csv', required: true, class: 'form-control-file') %>
+  </div>
+  <%= submit_tag('インポート', class: 'btn btn-outline-primary') %>
+<% end %>
+
+
+<%= button_to 'レコード全削除 & IDリセット', importcsv_delete_and_reset_incident_path, method: :delete, data: { confirm: 'レコードを全削除し、IDをリセットしてもよろしいですか？' }, class: 'btn btn-outline-danger' %>
+
+<br></br><br></br>

@@ -1,0 +1,20 @@
+<div class="p-2 flex-grow-1 bd-highlight">
+   <div class="card">
+      <div style="background-color:#EDF7FF;">
+      <p>Gyomu memo:
+      <% @gyomu_memos.each do |gyomu_memo| %>
+      <%= gyomu_memo %>
+      <% end %></p>
+      </div>
+   </div>
+</div>
+
+
+<div class="p-2 flex-grow-1 bd-highlight">
+      <div class="card">
+<% @securities.each do |security| %>
+      <!--<p><%= security.id %></p>-->
+      <p>Security Memo: <%= security.memo %></p>
+<% end %>
+</div>
+  </div>

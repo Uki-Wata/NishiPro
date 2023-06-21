@@ -1,0 +1,29 @@
+<% @gyomus.each do |gyomu| %>
+  <div>
+    <p>Gyomu ID: <%= gyomu.id %></p>
+    <p>Gyomu Name: <%= gyomu.name %></p>
+    <p>Gyomu Memo: <%= gyomu.memo %></p>
+  </div>
+<% end %>
+
+
+<!--<% @selected_smalls.each do |small| %>-->
+<!--  <div class="small">-->
+<!--    <p>ID: <%= small.id %></p>-->
+<!--    <p>Middle ID: <%= small.middle_id %></p>-->
+<!--    <p>Small Memo: <%= small.memo %></p>-->
+<!--    <% small.gyomus.each do |gyomu| %>-->
+<!--      <div class="gyomu">-->
+<!--        <p>ID: <%= gyomu.id %></p>-->
+<!--        <p>Small ID: <%= gyomu.small_id %></p>-->
+<!--        <p>Gyomu Memo: <%= gyomu.memo %></p>-->
+<!--        <% gyomu.securities.each do |security| %>-->
+<!--          <div class="security">-->
+<!--            <p>ID: <%= security.id %></p>-->
+<!--            <p>Security Memo: <%= security.memo %></p>-->
+<!--          </div>-->
+<!--        <% end %>-->
+<!--      </div>-->
+<!--    <% end %>-->
+<!--  </div>-->
+<!--<% end %>-->

@@ -1,0 +1,2 @@
+module IndexKnoHelper
+end

@@ -1,0 +1,83 @@
+    <div class="container mx+1">
+    <header class="d-flex flex-wrap flex-row ">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <%= form_tag(home_top_path, method: "get") do %>
+          <%= submit_tag('ホーム', class: 'btn btn-outline-primary mx+5') %>
+          <% end %>
+        </li>
+      </ul>
+    </header>
+    <br>
+    <button type="button" class="btn btn-primary">業務内容/経験</button>
+    <!--<button type="button" class="btn btn-outline-primary">過去事例</button>-->
+    <div class="card flex-md-row mx-0 border-primary">
+    <div class="container">
+    
+    
+    <!--@smalls（indexページで「small_ids」に指定されたIDに一致するsmallテーブルのすべてのデータ）を順に取り出して繰り返し処理をする-->
+    <% @smalls.each do |small| %>
+    　<div class="p-2 flex-grow-1 bd-highlight">
+    　<div class="row">
+        <div class="col-lg-9">
+          <div class="card flex-md-row mb-4 border-primary mb-3">
+        <!-- テーブルsmall内のmemoカラムの内容を表示 -->
+            <h4>選択した業務:　<%= small.memo %></h4>
+        　</div>
+        </div>
+    　</div>
+    　</div>
+    　
+    　
+        
+        <div class="row">
+            <div class="col-6 col-sm-4">
+            <h6>考慮するべきセキュリティ事項</h6>
+                  <div class="card flex-md-row mb-4 border-primary mb-3 h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start ">
+                    <!-- テーブルsecurityの関連するデータを取り出して繰り返し処理をする -->
+                    <% small.securities.each do |security| %>
+                    <!-- テーブルsecurity内のidカラムの内容を表示 -->
+                    <p>Security ID: <%= security.id %></p>
+                    <!-- テーブルsecurity内のmemoカラムの内容を表示 -->
+                    <p>Security memo: <%= security.memo %></p>
+                    <% end %>
+                    </div>
+        　        </div>
+            </div>
+        　
+        　
+            <div class="col-6 col-sm-4">
+            <h6>過去のインシデント事例</h6>
+                    <div class="card flex-md-row mb-4 border-primary mb-3 h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                         <!--インシデント事例、DB作成してから対応する-->
+                        <!--<% small.securities.each do |security| %>-->
+                        <!--<p>Security ID: <%= security.id %></p>-->
+                        <!--<% end %>-->
+                        </div>
+                    </div>
+            </div>
+            
+        
+        
+        <!--カラム名登録ミスってるので要修正: ditail → detail-->
+        <div class="w-100 d-none d-md-block">
+            <div class="col-6 col-sm-4">
+            <h6>その詳細</h6>
+                    <div class="card flex-md-row mb-4 border-primary mb-3 h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                        <% small.securities.each do |security| %>
+                        <p>Security Detail: <%= security.ditail %></p>
+                        <% end %>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    <hr>
+        </div>
+    <% end %>
+
+</div>
+</div>
